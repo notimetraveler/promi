@@ -18,7 +18,7 @@
   --font-mono: var(--font-mono), monospace;
 }
 
-* {
+html {
   scroll-behavior: smooth;
 }
 
@@ -56,4 +56,75 @@ body {
   background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
   bottom: -100px;
   left: -100px;
+}
+
+/* Improved Design page */
+.gradient-orb-improved {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.25;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+}
+.gradient-orb-1-improved {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(245, 158, 11, 0.12) 0%,
+    transparent 70%
+  );
+  top: -200px;
+  right: -150px;
+}
+.gradient-orb-2-improved {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(
+    circle,
+    rgba(249, 115, 22, 0.08) 0%,
+    transparent 70%
+  );
+  bottom: -100px;
+  left: -100px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.animate-marquee {
+  animation: marquee 50s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Smoother scroll - promote sections to own compositor layer */
+.section-reduce-jank {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+/* 3D popup hover effect for card blocks */
+.card-hover-3d {
+  transition:
+    transform 0.25s ease-out,
+    box-shadow 0.25s ease-out,
+    border-color 0.25s ease-out,
+    background-color 0.25s ease-out;
+}
+.card-hover-3d:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 40px -15px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(245, 158, 11, 0.25),
+    0 8px 25px -5px rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.3);
+  background-color: rgba(255, 255, 255, 0.06);
 }

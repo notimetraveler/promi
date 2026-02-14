@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Promidata – Website
 
-## Getting Started
+Next.js website voor Promidata, IT-oplossingen voor de promotional products en workwear industrie.
 
-First, run the development server:
+## Run instructions
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in je browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build voor productie
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Pagina's
 
-To learn more about Next.js, take a look at the following resources:
+- **`/`** – Originele homepage
+- **`/improved-design`** – Nieuwe B2B SaaS-stijl landing page (2025–2026 design patterns)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content wijzigen
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Alle teksten van de **Improved Design** pagina staan in:
 
-## Deploy on Vercel
+**`content/improved-home.ts`**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pas hier o.a. aan:
+- Hero (headline, subcopy, CTA-teksten)
+- Social proof (supplier-namen, claim)
+- Value pillars (ERP, Webshops, Sourcing, Data)
+- Solutions (promotional & workwear oplossingen)
+- How it works (3 stappen)
+- Metrics / stat-cards
+- Testimonials
+- FAQ (vragen en antwoorden)
+- Final CTA
+- Contactgegevens
+- Footer links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Wijzigingen verschijnen direct bij de volgende page refresh.
+
+## Assets
+
+- **Afbeeldingen**: plaats in `public/` (bijv. `public/logo.png`, `public/hero-image.png`)
+- **Supplier logo's**: voeg toe aan `content/improved-home.ts` in `socialProof.supplierNames`, of vervang de LogoCloud-component voor echte logo-afbeeldingen
+- **Hero visual**: de placeholder in `components/improved/Hero.tsx` kan vervangen worden door een screenshot, mock UI of video
+
+## Componenten (Improved Design)
+
+Herbruikbare componenten in `components/improved/`:
+
+| Component    | Beschrijving                    |
+|-------------|----------------------------------|
+| `Nav`       | Navigatiebalk                    |
+| `Hero`      | Hero-sectie met CTA's            |
+| `LogoCloud` | Social proof met supplier-namen |
+| `Features`  | Value pillars (4 kaarten)        |
+| `SolutionsTabs` | Promotional vs Workwear tabs |
+| `HowItWorks`| 3 stappen                        |
+| `Stats`     | Metrics / stat-cards             |
+| `Testimonials` | Klantquotes                   |
+| `Integrations` | Ecosysteem-integraties       |
+| `FAQ`       | Veelgestelde vragen              |
+| `CTA`       | Final call-to-action             |
+| `Footer`    | Contact, links, newsletter       |
+
+## Technologie
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Framer Motion** (subtiele animaties)
+
+## SEO
+
+De Improved Design pagina bevat:
+- Metadata (title, description, OG tags)
+- Structured data (Organization, SoftwareApplication)
+- Semantische headings (h1, h2)

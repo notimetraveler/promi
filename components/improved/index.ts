@@ -1,0 +1,12 @@
+export { Hero } from "./Hero";
+export { LogoCloud } from "./LogoCloud";
+export { Features } from "./Features";
+export { SolutionsTabs } from "./SolutionsTabs";
+export { HowItWorks } from "./HowItWorks";
+export { Stats } from "./Stats";
+export { Testimonials } from "./Testimonials";
+export { Integrations } from "./Integrations";
+export { FAQ } from "./FAQ";
+export { CTA } from "./CTA";
+export { Footer } from "./Footer";
+export { Nav } from "./Nav";
