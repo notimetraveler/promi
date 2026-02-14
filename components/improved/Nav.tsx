@@ -14,7 +14,7 @@ export function Nav() {
         <div className="flex items-center gap-4">
           <Link
             href="/"
-            className="hidden text-sm text-slate-400 transition-colors hover:text-white md:block"
+            className="text-sm text-slate-400 transition-colors hover:text-white"
           >
             Original site
           </Link>
