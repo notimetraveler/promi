@@ -71,7 +71,7 @@ export function Hero({ content }: { content: typeof HeroContent }) {
           </div>
 
           <motion.div
-            className="relative hidden lg:block"
+            className="relative block"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
